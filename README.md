@@ -1,5 +1,8 @@
 # React Employee Directory
 
+See the application deployed at 
+https://warm-plateau-18986.herokuapp.com/
+
 
 #### *The exercice is adapted to use Hooks (converted all Class components to Function components. useContext instead pass props. Use useEffect)* 
 
