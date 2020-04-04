@@ -3,20 +3,20 @@ import "../styles/DataBody.css";
 import DataAreaContext from "../utils/DataAreaContext";
 
 const DataBody = () => {
-    const context = useContext(DataAreaContext)
-}
+  const context = useContext(DataAreaContext);
 
-function formatDate(date) {
-    const dateArray = date.split("_");
-    const year = dateArray[0]
-    const month = dateArray[1]
-    const dayArray = dateArray[2].split("T")
+  function formatDate(date) {
+    const dateArray = date.split("-");
+    const year = dateArray[0];
+    const month = dateArray[1];
+    const dayArray = dateArray[2].split("T");
     const day = dayArray[0];
-    const formattedDate = [month, day, year].join("_")
-    return formattedDate
-}
+    const formattedDate = [month, day, year].join("-");
+    return formattedDate;
+  }
 
-<tbody>
+  return (
+    <tbody>
       {context.developerState.filteredUsers[0] !== undefined && context.developerState.filteredUsers[0].name !== undefined ? (
         context.developerState.filteredUsers.map(({ login, name, picture, phone, email, dob }) => {
           return (
@@ -53,4 +53,3 @@ function formatDate(date) {
 }
 
 export default DataBody;
-)
